@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  width: 60%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(45, 140, 240, 0.5);
+  border: 2px solid #2d8cf0;
+}
+.button {
+  padding: 12px 20px;
+  background: #2d8cf0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  transform: scale(1.05);
+}
+.page {
+  margin-top: 30px;
 }
 
-.card {
-  padding: 2em;
+.page div {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
-.read-the-docs {
-  color: #888;
+.page h3 {
+  margin: 10px 0;
+}
+
+.page p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.page img {
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
 }
