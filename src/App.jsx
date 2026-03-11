@@ -34,20 +34,22 @@ function App() {
   return (
     <div className="container">
       <p className="title">Country Search App</p>
-      <input
-        type="text"
-        placeholder="Please enter Country"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            fetchCountry();
-          }
-        }}
-      />
-      <button className="button" onClick={fetchCountry}>
-        search
-      </button>
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Please enter Country"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              fetchCountry();
+            }
+          }}
+        />
+        <button className="button" onClick={fetchCountry}>
+          search
+        </button>
+      </div>
       <div className="page">
         {loading && <p>Loading...</p>}
         {error && <p className="error">{error}</p>}
